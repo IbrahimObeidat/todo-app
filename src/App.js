@@ -10,19 +10,23 @@ function App() {
     event.preventDefault();
 
     let todosLength = todos.length;
-    // console.log(todosLength);
 
-    //Add the new todo to the list of todos
-    const newTodo = {
-      id: (todosLength += 1),
-      text: textInput,
-      isChecked: false,
-    };
-    const newTodos = [...todos, newTodo];
-    setTodos(newTodos);
+    //if text input is empty, don't do anything on submit
+    if (textInput !== "") {
+      //Add the new todo to the list of todos
+      const newTodo = {
+        id: (todosLength += 1),
+        text: textInput,
+        isChecked: false,
+      };
+      const newTodos = [...todos, newTodo];
+      setTodos(newTodos);
 
-    //empty the input field after adding
-    setTextInput("");
+      //empty the input field after adding
+      setTextInput("");
+    } else {
+      return null;
+    }
   };
 
   const handleCheckboxClick = (id) => {
