@@ -1,5 +1,13 @@
+import { AddTodo, TodosList, TodoItem } from "./components";
+
 function App() {
-  return <div className="App">Hello World!c</div>;
+  return (
+    <div className="App">
+      <AddTodo />
+      <TodosList />
+      <TodoItem />
+    </div>
+  );
 }
 
 export default App;
