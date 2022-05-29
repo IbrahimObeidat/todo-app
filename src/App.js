@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AddTodo, TodosList, TodoItem } from "./components";
+import { AddTodo, TodosList } from "./components";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -25,6 +25,17 @@ function App() {
     setTextInput("");
   };
 
+  const handleCheckboxClick = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, isChecked: !todo.isChecked };
+      } else {
+        return todo;
+      }
+    });
+
+    setTodos(newTodos);
+  };
   return (
     <div className="App">
       <AddTodo
@@ -32,8 +43,7 @@ function App() {
         setTextInput={setTextInput}
         handleSubmit={handleSubmit}
       />
-      <TodosList todos={todos} />
-      <TodoItem />
+      <TodosList todos={todos} handleCheckboxClick={handleCheckboxClick} />
     </div>
   );
 }
