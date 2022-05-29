@@ -1,6 +1,11 @@
 import React from "react";
 
-const TodoItem = ({ todo, handleCheckboxClick, handleTodoChange }) => {
+const TodoItem = ({
+  todo,
+  handleCheckboxClick,
+  handleTodoChange,
+  handleDelete,
+}) => {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <input
@@ -13,6 +18,7 @@ const TodoItem = ({ todo, handleCheckboxClick, handleTodoChange }) => {
       >
         {todo.text}
       </textarea>
+      <button onClick={() => handleDelete(todo.id)}>Delete</button>
     </div>
   );
 };

@@ -51,6 +51,11 @@ function App() {
     });
     setTodos(newTodos);
   };
+
+  const handleDelete = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
   return (
     <div className="App">
       <AddTodo
@@ -62,6 +67,7 @@ function App() {
         todos={todos}
         handleCheckboxClick={handleCheckboxClick}
         handleTodoChange={handleTodoChange}
+        handleDelete={handleDelete}
       />
     </div>
   );

@@ -1,7 +1,12 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodosList = ({ todos, handleCheckboxClick, handleTodoChange }) => {
+const TodosList = ({
+  todos,
+  handleCheckboxClick,
+  handleTodoChange,
+  handleDelete,
+}) => {
   return (
     <div>
       {todos.map((todo) => {
@@ -11,6 +16,7 @@ const TodosList = ({ todos, handleCheckboxClick, handleTodoChange }) => {
             todo={todo}
             handleCheckboxClick={handleCheckboxClick}
             handleTodoChange={handleTodoChange}
+            handleDelete={handleDelete}
           />
         );
       })}
