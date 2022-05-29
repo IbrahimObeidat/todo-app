@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = ({ todo, handleCheckboxClick }) => {
+const TodoItem = ({ todo, handleCheckboxClick, handleTodoChange }) => {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <input
@@ -8,7 +8,11 @@ const TodoItem = ({ todo, handleCheckboxClick }) => {
         checked={todo.isChecked}
         onChange={() => handleCheckboxClick(todo.id)}
       />
-      <textarea>{todo.text}</textarea>
+      <textarea
+        onChange={(event) => handleTodoChange(event.target.value, todo.id)}
+      >
+        {todo.text}
+      </textarea>
     </div>
   );
 };

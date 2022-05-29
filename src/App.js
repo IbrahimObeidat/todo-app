@@ -36,6 +36,17 @@ function App() {
 
     setTodos(newTodos);
   };
+
+  const handleTodoChange = (updatedText, id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, text: updatedText };
+      } else {
+        return todo;
+      }
+    });
+    setTodos(newTodos);
+  };
   return (
     <div className="App">
       <AddTodo
@@ -43,7 +54,11 @@ function App() {
         setTextInput={setTextInput}
         handleSubmit={handleSubmit}
       />
-      <TodosList todos={todos} handleCheckboxClick={handleCheckboxClick} />
+      <TodosList
+        todos={todos}
+        handleCheckboxClick={handleCheckboxClick}
+        handleTodoChange={handleTodoChange}
+      />
     </div>
   );
 }
