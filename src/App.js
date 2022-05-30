@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddTodo, TodosList } from "./components";
 import { v4 as uuidv4 } from "uuid";
+import { GlobalStyle } from "./styles";
 
 function App() {
   const savedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -62,6 +63,7 @@ function App() {
   };
   return (
     <div className="App">
+      <GlobalStyle />
       <AddTodo
         textInput={textInput}
         setTextInput={setTextInput}
