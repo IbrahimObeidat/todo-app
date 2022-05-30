@@ -3,13 +3,13 @@ import { AddTodo, TodosList } from "./components";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  // const savedTodos = JSON.parse(localStorage.getItem("todos"));
-  const [todos, setTodos] = useState([]);
+  const savedTodos = JSON.parse(localStorage.getItem("todos"));
+  const [todos, setTodos] = useState(savedTodos);
   const [textInput, setTextInput] = useState("");
 
-  // useEffect(() => {
-  //   localStorage.setItem("todos", JSON.stringify(todos));
-  // }, [todos]);
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleSubmit = (event) => {
     //to prevent the default action of refrishing the page onSubmit
