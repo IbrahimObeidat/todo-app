@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTodo, TodosList } from "./components";
-import nextId from "react-id-generator";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
+  // const savedTodos = JSON.parse(localStorage.getItem("todos"));
   const [todos, setTodos] = useState([]);
   const [textInput, setTextInput] = useState("");
+
+  // useEffect(() => {
+  //   localStorage.setItem("todos", JSON.stringify(todos));
+  // }, [todos]);
 
   const handleSubmit = (event) => {
     //to prevent the default action of refrishing the page onSubmit
@@ -14,7 +19,7 @@ function App() {
     if (textInput !== "") {
       //Add the new todo to the list of todos
       const newTodo = {
-        id: nextId(),
+        id: uuidv4(),
         text: textInput,
         isChecked: false,
       };
