@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AddTodo, TodosList } from "./components";
+import nextId from "react-id-generator";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -9,13 +10,11 @@ function App() {
     //to prevent the default action of refrishing the page onSubmit
     event.preventDefault();
 
-    let todosLength = todos.length;
-
     //if text input is empty, don't do anything on submit
     if (textInput !== "") {
       //Add the new todo to the list of todos
       const newTodo = {
-        id: (todosLength += 1),
+        id: nextId(),
         text: textInput,
         isChecked: false,
       };
