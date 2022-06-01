@@ -6,7 +6,7 @@ const StyledItem = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 45.14em;
+  width: 44em;
 
   .todo-container {
     display: flex;
@@ -33,11 +33,11 @@ const StyledItem = styled.div`
   }
 
   .custom-checkbox {
-    width: 1em;
-    height: 1em;
+    width: 0.9em;
+    height: 0.9em;
 
-    min-width: 8px;
-    min-height: 8px;
+    min-width: 0.9em;
+    min-height: 0.9em;
 
     cursor: pointer;
 
@@ -53,7 +53,7 @@ const StyledItem = styled.div`
 
   .default-checkbox:hover + .custom-checkbox {
     border: 2px solid rgba(243, 85, 34, 1);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
   }
 
   .default-checkbox:checked + .custom-checkbox {
@@ -103,8 +103,8 @@ const StyledItem = styled.div`
   .todo-text.completed {
     color: #aebbcf;
     text-decoration: line-through;
-    text-decoration-thickness: 1.3px;
-    text-decoration-color: inherit;
+    text-decoration-thickness: 2.4px;
+    text-decoration-color: rgba(174, 187, 207, 0.7);
   }
 
   .todo-text:focus {

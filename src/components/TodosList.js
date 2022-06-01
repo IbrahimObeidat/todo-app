@@ -1,5 +1,6 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import { StyledList } from "../styles";
 
 const TodosList = ({
   todos,
@@ -8,7 +9,7 @@ const TodosList = ({
   handleDelete,
 }) => {
   return (
-    <div>
+    <StyledList>
       {todos.map((todo) => {
         return (
           <TodoItem
@@ -20,7 +21,7 @@ const TodosList = ({
           />
         );
       })}
-    </div>
+    </StyledList>
   );
 };
 
