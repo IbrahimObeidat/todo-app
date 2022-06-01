@@ -33,8 +33,8 @@ const StyledItem = styled.div`
   }
 
   .custom-checkbox {
-    width: 0.9em;
-    height: 0.9em;
+    width: 1em;
+    height: 1em;
 
     min-width: 0.9em;
     min-height: 0.9em;
@@ -43,7 +43,7 @@ const StyledItem = styled.div`
 
     background: white;
     border-radius: 100vw;
-    border: 2px solid rgba(243, 85, 34, 0.7);
+    border: 2.2px solid rgba(243, 85, 34, 0.7);
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -52,13 +52,13 @@ const StyledItem = styled.div`
   }
 
   .default-checkbox:hover + .custom-checkbox {
-    border: 2px solid rgba(243, 85, 34, 1);
+    border: 2.2px solid rgba(243, 85, 34, 1);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
   }
 
   .default-checkbox:checked + .custom-checkbox {
     background-color: #aebbcf;
-    border: 2px solid #aebbcf;
+    border: 2.2px solid #aebbcf;
   }
 
   .checkmark {
@@ -77,7 +77,7 @@ const StyledItem = styled.div`
   }
 
   .default-checkbox:focus + .custom-checkbox {
-    outline: 1px solid rgba(174, 187, 207, 0.5);
+    outline: 2.2px solid rgba(174, 187, 207, 0.5);
   }
 
   .todo-text {
@@ -97,11 +97,12 @@ const StyledItem = styled.div`
     margin-right: 0.5em;
     padding: 0.2em 0.1em;
 
-    border-bottom: 2px solid rgba(174, 187, 207, 0);
+    border-bottom: 2px solid rgba(174, 187, 207, 0.1);
   }
 
   .todo-text.completed {
     color: #aebbcf;
+    font-weight: 500;
     text-decoration: line-through;
     text-decoration-thickness: 2.4px;
     text-decoration-color: rgba(174, 187, 207, 0.7);
@@ -109,7 +110,7 @@ const StyledItem = styled.div`
 
   .todo-text:focus {
     outline: none;
-    border-bottom: 2px solid rgba(174, 187, 207, 0.5);
+    border-bottom: 2px solid rgba(174, 187, 207, 0.6);
   }
 
   @media only screen and (max-width: 800px) {

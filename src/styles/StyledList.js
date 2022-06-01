@@ -6,7 +6,7 @@ const StyledList = styled.div`
   align-items: center;
   justify-content: center;
 
-  gap: 1em;
+  gap: 1.4em;
 
   margin-top: 2em;
 `;
