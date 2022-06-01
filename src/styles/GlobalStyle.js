@@ -16,8 +16,15 @@ const GlobalStyle = createGlobalStyle`
 
     font-family: var(--font);
     font-size: 1vw;
+    line-height: 1.6em;
     color: var(--black);
 
+  }
+
+  @media only screen and (min-width: 1920px) {
+     body {
+       font-size: 1.4em;
+      }
   }
 `;
 
