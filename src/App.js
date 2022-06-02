@@ -85,6 +85,7 @@ function App() {
         handleTodoChange={handleTodoChange}
         handleDelete={handleDelete}
       />
+      <div className="bottom"></div>
       <ScrollToTop />
     </div>
   );

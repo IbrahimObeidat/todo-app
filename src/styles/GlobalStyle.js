@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
   .App{
     position: relative;
   }
+
+  .bottom{
+    height: 2em;
+  }
 `;
 
 export default GlobalStyle;

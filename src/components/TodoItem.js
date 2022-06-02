@@ -13,6 +13,18 @@ const TodoItem = ({
   const handleChange = (e) => {
     text.current = e.target.value;
     handleTodoChange(text.current, todo.id);
+
+    if (text.current === "" || text.current === "undefined") {
+      handleBackSpace(e);
+    }
+  };
+
+  const handleBackSpace = (e) => {
+    if (text.current === "" || text.current === "undefined") {
+      if (e.keyCode === 8) {
+        handleDelete(todo.id);
+      }
+    }
   };
 
   return (
@@ -45,7 +57,8 @@ const TodoItem = ({
           className={!todo.isChecked ? "todo-text" : "todo-text completed"}
           disabled={todo.isChecked ? true : false}
           html={text.current}
-          onChange={(e) => handleChange(e)}
+          onChange={handleChange}
+          onKeyDown={handleBackSpace}
         ></ContentEditable>
       </div>
 

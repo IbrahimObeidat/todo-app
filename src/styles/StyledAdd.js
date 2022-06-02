@@ -43,6 +43,10 @@ const StyledAdd = styled.div`
     border-radius: 0.4em;
   }
 
+  input:hover {
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.08);
+  }
+
   .add-button:focus {
     outline: 2.2px solid rgba(174, 187, 207, 1);
     border-radius: 0 0.4em 0.4em 0;
@@ -52,7 +56,7 @@ const StyledAdd = styled.div`
   .add-container {
     background: rgba(243, 85, 34, 0.8);
     border-radius: 0 0.4em 0.4em 0;
-    height: 98%;
+    height: 100%;
     width: 2.4em;
     display: flex;
     align-items: center;
