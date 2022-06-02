@@ -6,9 +6,12 @@ const StyledList = styled.div`
   align-items: center;
   justify-content: center;
 
-  gap: 1.4em;
+  gap: 1.2em;
 
-  margin-top: 2em;
+  padding-top: 5em;
+  padding-bottom: 3em;
+
+  overflow-y: auto;
 `;
 
 export default StyledList;

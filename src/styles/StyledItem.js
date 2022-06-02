@@ -41,7 +41,7 @@ const StyledItem = styled.div`
 
     cursor: pointer;
 
-    background: white;
+    background: none;
     border-radius: 100vw;
     border: 2.2px solid rgba(243, 85, 34, 0.7);
     display: flex;
@@ -53,7 +53,7 @@ const StyledItem = styled.div`
 
   .default-checkbox:hover + .custom-checkbox {
     border: 2.2px solid rgba(243, 85, 34, 1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 12px rgba(0, 0, 0, 0.1);
   }
 
   .default-checkbox:checked + .custom-checkbox {
@@ -71,19 +71,19 @@ const StyledItem = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: inherit;
+    width: 0.8em;
     background-color: transparent;
     visibility: visible;
   }
 
   .default-checkbox:focus + .custom-checkbox {
-    outline: 2.2px solid rgba(174, 187, 207, 0.5);
+    outline: 2.2px solid rgba(174, 187, 207, 0.6);
   }
 
   .todo-text {
     font-family: inherit;
-    font-size: 1.3em;
-    line-height: 1.4rem;
+    font-size: 1.2em;
+    line-height: 1.8rem;
 
     background-color: transparent;
     /* resize: none; */
@@ -97,11 +97,12 @@ const StyledItem = styled.div`
     margin-right: 0.5em;
     padding: 0.2em 0.1em;
 
-    border-bottom: 2px solid rgba(174, 187, 207, 0.1);
+    border-bottom: 2px solid rgba(174, 187, 207, 0);
   }
 
   .todo-text.completed {
     color: #aebbcf;
+    cursor: default;
     font-weight: 500;
     text-decoration: line-through;
     text-decoration-thickness: 2.4px;
@@ -123,20 +124,25 @@ const StyledItem = styled.div`
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0 0.4em;
+    padding: 0.2em;
+
     visibility: hidden;
+    transition: 0.05s;
   }
 
+  .delete-icon:focus {
+    outline: 2.2px solid rgba(174, 187, 207, 0.8);
+    border-radius: 0.4em;
+  }
+
+  .todo-container:hover + .delete-icon,
   .delete-icon:hover {
     visibility: visible;
-  }
-
-  .todo-container:hover + .delete-icon {
-    visibility: visible;
+    transition: 0.05s;
   }
 
   .delete-icon svg {
-    width: 1.8em;
+    width: 2em;
   }
   .delete-icon path {
     fill: #aebbcf;

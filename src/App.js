@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AddTodo, TodosList } from "./components";
 import { v4 as uuidv4 } from "uuid";
 import { GlobalStyle } from "./styles";
+import { ScrollToTop } from "./components";
 
 function App() {
   const savedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -29,9 +30,18 @@ function App() {
 
       //empty the input field after adding
       setTextInput("");
+
+      scrollToBottom();
     } else {
       return null;
     }
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
   };
 
   const handleCheckboxClick = (id) => {
@@ -75,6 +85,7 @@ function App() {
         handleTodoChange={handleTodoChange}
         handleDelete={handleDelete}
       />
+      <ScrollToTop />
     </div>
   );
 }

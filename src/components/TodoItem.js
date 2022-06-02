@@ -43,14 +43,10 @@ const TodoItem = ({
         </label>
         <ContentEditable
           className={!todo.isChecked ? "todo-text" : "todo-text completed"}
-          // contentEditable="true"
-          // rows="1"
-          // onChange={(e) => handleTodoChange(e.currentTarget.textContent, todo.id)}
+          disabled={todo.isChecked ? true : false}
           html={text.current}
           onChange={(e) => handleChange(e)}
-        >
-          {/* {todo.text} */}
-        </ContentEditable>
+        ></ContentEditable>
       </div>
 
       <button className="delete-icon" onClick={() => handleDelete(todo.id)}>
