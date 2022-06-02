@@ -21,6 +21,7 @@ const StyledAdd = styled.div`
     gap: 1em;
     position: relative;
     align-items: center;
+    justify-content: center;
     width: 100%;
   }
 
@@ -51,7 +52,7 @@ const StyledAdd = styled.div`
   .add-container {
     background: rgba(243, 85, 34, 0.8);
     border-radius: 0 0.4em 0.4em 0;
-    height: 100%;
+    height: 98%;
     width: 2.4em;
     display: flex;
     align-items: center;

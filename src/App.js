@@ -18,7 +18,7 @@ function App() {
     event.preventDefault();
 
     //if text input is empty, don't do anything on submit
-    if (textInput !== "") {
+    if (textInput !== "" && textInput.trim().length > 0) {
       //Add the new todo to the list of todos
       const newTodo = {
         id: uuidv4(),
