@@ -12,6 +12,10 @@ const StyledList = styled.div`
   padding-bottom: 3em;
 
   overflow-y: auto;
+
+  h3 {
+    font-weight: 400;
+  }
 `;
 
 export default StyledList;

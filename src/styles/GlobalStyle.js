@@ -38,6 +38,12 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
+  ::selection {
+  background: rgba(243, 85, 34, .8);
+  /* mix-blend-mode: difference; */
+  color: white;
+}
+
   .bottom{
     height: 2em;
   }
