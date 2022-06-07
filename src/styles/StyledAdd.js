@@ -39,18 +39,21 @@ const StyledAdd = styled.div`
   }
 
   input:focus {
-    outline: 2.2px solid rgba(174, 187, 207, 0.8);
+    outline: 2.2px solid rgba(174, 187, 207, 0.5);
     border-radius: 0.4em;
+    transition: 0.08s;
   }
 
   input:hover {
     box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.08);
+    transition: 0.1s;
   }
 
   .add-button:focus {
     outline: 2.2px solid rgba(174, 187, 207, 1);
     border-radius: 0 0.4em 0.4em 0;
     background: rgba(243, 85, 34, 1);
+    transition: 0.08s;
   }
 
   .add-container {
@@ -67,6 +70,7 @@ const StyledAdd = styled.div`
 
   .add-container:hover {
     background: rgba(243, 85, 34, 1);
+    transition: 0.1s;
   }
 
   .add-button {

@@ -7,6 +7,7 @@ const StyledItem = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 44em;
+  padding: 0.8em 0;
 
   .todo-container {
     display: flex;
@@ -22,7 +23,7 @@ const StyledItem = styled.div`
   .default-checkbox {
     border: 0;
     clip: rect(0 0 0 0);
-    clippath: inset(50%);
+    clip-path: inset(50%);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -54,11 +55,13 @@ const StyledItem = styled.div`
   .default-checkbox:hover + .custom-checkbox {
     border: 2.2px solid rgba(243, 85, 34, 1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.1s;
   }
 
   .default-checkbox:checked + .custom-checkbox {
     background-color: #aebbcf;
     border: 2.2px solid #aebbcf;
+    transition: 0.2s;
   }
 
   .checkmark {
@@ -74,10 +77,12 @@ const StyledItem = styled.div`
     width: 0.8em;
     background-color: transparent;
     visibility: visible;
+    transition: 0.2s;
   }
 
   .default-checkbox:focus + .custom-checkbox {
-    outline: 2.2px solid rgba(174, 187, 207, 0.6);
+    outline: 2.5px solid rgba(174, 187, 207, 0.5);
+    transition: 0.1s;
   }
 
   .todo-text {
@@ -88,7 +93,7 @@ const StyledItem = styled.div`
     background-color: transparent;
     /* resize: none; */
     /* border: none; */
-    /* overflow: hidden; */
+    overflow: hidden;
 
     width: 100%;
 
@@ -111,7 +116,8 @@ const StyledItem = styled.div`
 
   .todo-text:focus {
     outline: none;
-    border-bottom: 2px solid rgba(174, 187, 207, 0.6);
+    border-bottom: 2px solid rgba(174, 187, 207, 0.5);
+    transition: 0.2s;
   }
 
   @media only screen and (max-width: 800px) {
@@ -133,6 +139,7 @@ const StyledItem = styled.div`
   .delete-icon:focus {
     outline: 2.2px solid rgba(174, 187, 207, 0.8);
     border-radius: 0.4em;
+    transition: 0.2s;
   }
 
   .todo-container:hover + .delete-icon,
@@ -150,6 +157,7 @@ const StyledItem = styled.div`
 
   .delete-icon:hover path {
     fill: rgba(243, 85, 34, 1);
+    transition: 0.2s;
   }
 `;
 

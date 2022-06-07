@@ -6,10 +6,8 @@ const StyledList = styled.div`
   align-items: center;
   justify-content: center;
 
-  gap: 1.2em;
-
-  padding-top: 5em;
-  padding-bottom: 3em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 
   overflow-y: auto;
 
