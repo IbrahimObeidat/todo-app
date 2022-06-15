@@ -5,7 +5,7 @@ import { GlobalStyle } from "./styles";
 import { ScrollToTop } from "./components";
 
 function App() {
-  const savedTodos = JSON.parse(localStorage.getItem("todos"));
+  const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
   const [todos, setTodos] = useState(savedTodos);
   const [textInput, setTextInput] = useState("");
 
